@@ -1,0 +1,120 @@
+body {
+  background: rgb(255, 132, 254);
+  background: linear-gradient(
+    150deg,
+    rgba(255, 132, 254, 0.7203256302521008) 0%,
+    rgba(79, 76, 255, 1) 50%,
+    rgba(23, 216, 255, 0.6643032212885154) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: monospace;
+  height: 325vh;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(233, 233, 233);
+  font-size: 5em;
+}
+
+.catButton {
+  padding: 3em;
+  display: inline-block;
+  padding: 24px 32px;
+  width: 400px;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.catButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 100%;
+  justify-content: center;
+}
+
+.catCard {
+  width: auto;
+  padding: 1em;
+  border-radius: 1em;
+  display: grid;
+  grid-template-areas:
+    "breed breed breed"
+    ". img ."
+    "origin origin origin"
+    "desc desc desc";
+  grid-template-rows: 0.15fr 0.25fr 0.15fr 0.45fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.randomCatCard {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1em;
+}
+
+.catBreed {
+  grid-area: breed;
+  color: rgb(233, 233, 233);
+  letter-spacing: 0.15em;
+  font-size: 2em;
+}
+
+.catImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1em 0 1em 0;
+  border-top: 2px solid rgb(233, 233, 233);
+  border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+.catImg {
+  grid-area: img;
+  max-height: 200px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.catOrigin {
+  grid-area: origin;
+  color: rgb(233, 233, 233);
+  font-size: 1.5em;
+}
+
+.catDesc {
+  grid-area: desc;
+  color: rgb(233, 233, 233);
+  font-size: 1.25em;
+}
